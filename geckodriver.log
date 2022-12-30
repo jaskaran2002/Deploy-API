@@ -1,0 +1,162 @@
+1672414073308	geckodriver	INFO	Listening on 127.0.0.1:58503
+1672414073377	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--remote-debugging-port" "33401" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileCbN9Ih"
+*** You are running in headless mode.
+
+(firefox:59681): Gtk-WARNING **: 20:57:53.423: Locale not supported by C library.
+	Using the fallback 'C' locale.
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+1672414073827	Marionette	INFO	Marionette enabled
+1672414073833	Marionette	INFO	Listening on port 43475
+Read port: 43475
+WebDriver BiDi listening on ws://127.0.0.1:33401
+1672414073975	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileCbN9Ih/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:33401/devtools/browser/2a15d73b-8c5f-4559-b305-1504aedf32be
+JavaScript warning: https://www.redditstatic.com/accountmanager/ssoOneTap.9f8d3f61ec2c057cd0e6.js, line 1: unreachable code after return statement
+1672414084761	Marionette	INFO	Stopped listening on port 43475
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 719: Error: Phase "Sqlite.jsm: wait until all connections are closed" is finished, it is too late to register completion condition "protections.sqlite#0: waiting for shutdown"
+1672414086160	geckodriver	INFO	Listening on 127.0.0.1:38499
+1672414086260	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--remote-debugging-port" "45847" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileK5QDHQ"
+*** You are running in headless mode.
+
+(firefox:59987): Gtk-WARNING **: 20:58:06.314: Locale not supported by C library.
+	Using the fallback 'C' locale.
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+1672414086828	Marionette	INFO	Marionette enabled
+1672414086837	Marionette	INFO	Listening on port 33895
+Read port: 33895
+WebDriver BiDi listening on ws://127.0.0.1:45847
+1672414086984	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileK5QDHQ/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:45847/devtools/browser/4ad0dfc9-3713-4873-965c-f0f86cdf4519
+JavaScript warning: https://www.redditstatic.com/accountmanager/ssoOneTap.9f8d3f61ec2c057cd0e6.js, line 1: unreachable code after return statement
+1672414102066	Marionette	INFO	Stopped listening on port 33895
+1672414149471	geckodriver	INFO	Listening on 127.0.0.1:46803
+1672414150047	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--remote-debugging-port" "60621" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileHVGhvN"
+*** You are running in headless mode.
+
+(firefox:60529): Gtk-WARNING **: 20:59:10.090: Locale not supported by C library.
+	Using the fallback 'C' locale.
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+1672414150521	Marionette	INFO	Marionette enabled
+1672414150526	Marionette	INFO	Listening on port 36701
+Read port: 36701
+WebDriver BiDi listening on ws://127.0.0.1:60621
+1672414150649	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileHVGhvN/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:60621/devtools/browser/c697b4ac-290b-4984-842f-0bf51f9ec118
+JavaScript warning: https://www.redditstatic.com/accountmanager/ssoOneTap.9f8d3f61ec2c057cd0e6.js, line 1: unreachable code after return statement
+1672414164094	Marionette	INFO	Stopped listening on port 36701
+1672414247799	geckodriver	INFO	Listening on 127.0.0.1:50731
+1672414247860	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--remote-debugging-port" "50951" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileYvNcGK"
+*** You are running in headless mode.
+
+(firefox:60881): Gtk-WARNING **: 21:00:47.900: Locale not supported by C library.
+	Using the fallback 'C' locale.
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+1672414248319	Marionette	INFO	Marionette enabled
+1672414248324	Marionette	INFO	Listening on port 37559
+Read port: 37559
+WebDriver BiDi listening on ws://127.0.0.1:50951
+1672414248443	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileYvNcGK/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:50951/devtools/browser/c13c9c49-a1d0-4691-add8-be26df82ff39
+JavaScript warning: https://www.redditstatic.com/accountmanager/ssoOneTap.9f8d3f61ec2c057cd0e6.js, line 1: unreachable code after return statement
+1672414260224	Marionette	INFO	Stopped listening on port 37559
+1672414280692	geckodriver	INFO	Listening on 127.0.0.1:48217
+1672414280744	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--remote-debugging-port" "38725" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile5JuMIb"
+*** You are running in headless mode.
+
+(firefox:61256): Gtk-WARNING **: 21:01:20.784: Locale not supported by C library.
+	Using the fallback 'C' locale.
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+1672414281182	Marionette	INFO	Marionette enabled
+1672414281187	Marionette	INFO	Listening on port 37067
+Read port: 37067
+WebDriver BiDi listening on ws://127.0.0.1:38725
+1672414281299	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile5JuMIb/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:38725/devtools/browser/7723e83f-4dfe-42fc-918c-dd8223440e1d
+1672414290692	Marionette	INFO	Stopped listening on port 37067
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 719: Error: Phase "Sqlite.jsm: wait until all connections are closed" is finished, it is too late to register completion condition "protections.sqlite#0: waiting for shutdown"
+1672414291814	geckodriver	INFO	Listening on 127.0.0.1:47345
+1672414291867	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--remote-debugging-port" "47717" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile8Rw3SB"
+*** You are running in headless mode.
+
+(firefox:61562): Gtk-WARNING **: 21:01:31.907: Locale not supported by C library.
+	Using the fallback 'C' locale.
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+1672414292339	Marionette	INFO	Marionette enabled
+1672414292343	Marionette	INFO	Listening on port 39437
+Read port: 39437
+WebDriver BiDi listening on ws://127.0.0.1:47717
+1672414292455	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile8Rw3SB/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:47717/devtools/browser/8688ff12-0603-4acd-a9b0-7bea96e2d92f
+JavaScript warning: https://www.redditstatic.com/accountmanager/ssoOneTap.9f8d3f61ec2c057cd0e6.js, line 1: unreachable code after return statement
+1672414304444	Marionette	INFO	Stopped listening on port 39437
+1672414305541	geckodriver	INFO	Listening on 127.0.0.1:43203
+1672414305547	geckodriver	INFO	Listening on 127.0.0.1:35283
+1672414305624	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--remote-debugging-port" "58201" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileeDphqr"
+*** You are running in headless mode.
+
+(firefox:61885): Gtk-WARNING **: 21:01:45.669: Locale not supported by C library.
+	Using the fallback 'C' locale.
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+1672414306100	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--remote-debugging-port" "40949" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileZ9RUhh"
+*** You are running in headless mode.
+
+(firefox:61953): Gtk-WARNING **: 21:01:46.165: Locale not supported by C library.
+	Using the fallback 'C' locale.
+1672414306175	Marionette	INFO	Marionette enabled
+1672414306183	Marionette	INFO	Listening on port 41049
+Read port: 41049
+WebDriver BiDi listening on ws://127.0.0.1:58201
+1672414306359	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+1672414306760	Marionette	INFO	Marionette enabled
+1672414306768	Marionette	INFO	Listening on port 46753
+Read port: 46753
+WebDriver BiDi listening on ws://127.0.0.1:40949
+1672414306969	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileeDphqr/search.json.mozlz4", (void 0)))
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileZ9RUhh/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:58201/devtools/browser/10604805-3a77-4df4-a6e4-c15e5c7f1783
+DevTools listening on ws://127.0.0.1:40949/devtools/browser/15a0f09c-8d4d-4dd4-8e10-9d7264405d18
+JavaScript warning: https://www.redditstatic.com/accountmanager/ssoOneTap.9f8d3f61ec2c057cd0e6.js, line 1: unreachable code after return statement
+JavaScript warning: https://www.redditstatic.com/accountmanager/ssoOneTap.9f8d3f61ec2c057cd0e6.js, line 1: unreachable code after return statement
+1672414323050	Marionette	INFO	Stopped listening on port 46753
+1672414323133	Marionette	INFO	Stopped listening on port 41049
+1672416580508	geckodriver	INFO	Listening on 127.0.0.1:54494
+1672416580971	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-headless" "--remote-debugging-port" "54495" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/zn/rnq281tx5yxghx89dy_dssm80000gn/T/rust_mozprofilecpGnab"
+*** You are running in headless mode.
+1672416581542	Marionette	INFO	Marionette enabled
+1672416581616	Marionette	INFO	Listening on port 54501
+Read port: 54501
+WebDriver BiDi listening on ws://127.0.0.1:54495
+1672416581835	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/zn/rnq281tx5yxghx89dy_dssm80000gn/T/rust_mozprofilecpGnab/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:54495/devtools/browser/d33a0b4c-551b-4d6e-83e6-b7a1ce5bb1f7
+JavaScript warning: https://www.redditstatic.com/accountmanager/ssoOneTap.9f8d3f61ec2c057cd0e6.js, line 1: unreachable code after return statement
+1672416658628	geckodriver	INFO	Listening on 127.0.0.1:54600
+1672416659146	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-headless" "--remote-debugging-port" "54601" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/zn/rnq281tx5yxghx89dy_dssm80000gn/T/rust_mozprofilexTyXS3"
+*** You are running in headless mode.
+1672416659652	Marionette	INFO	Marionette enabled
+1672416659687	Marionette	INFO	Listening on port 54606
+Read port: 54606
+WebDriver BiDi listening on ws://127.0.0.1:54601
+1672416659953	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/zn/rnq281tx5yxghx89dy_dssm80000gn/T/rust_mozprofilexTyXS3/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:54601/devtools/browser/90c14924-40b4-4f50-94bf-37a7bdfd2e7b
+JavaScript warning: https://www.redditstatic.com/accountmanager/ssoOneTap.9f8d3f61ec2c057cd0e6.js, line 1: unreachable code after return statement
+1672416669146	Marionette	INFO	Stopped listening on port 54606
