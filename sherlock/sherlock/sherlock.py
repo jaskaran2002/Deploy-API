@@ -483,7 +483,7 @@ def handler(signal_received, frame):
     sys.exit(0)
 
 
-def main():
+def customfunc(usern):
     version_string = f"%(prog)s {__version__}\n" + \
                      f"{requests.__description__}:  {requests.__version__}\n" + \
                      f"Python:  {platform.python_version()}"
@@ -533,7 +533,7 @@ def main():
                         help="Load data from a JSON file or an online, valid, JSON file.")
     parser.add_argument("--timeout",
                         action="store", metavar="TIMEOUT",
-                        dest="timeout", type=timeout_check, default=60,
+                        dest="timeout", type=timeout_check, default=5,
                         help="Time (in seconds) to wait for response to requests (Default: 60)"
                         )
     parser.add_argument("--print-all",
@@ -548,11 +548,11 @@ def main():
                         action="store_true", dest="no_color", default=False,
                         help="Don't color terminal output"
                         )
-    parser.add_argument("username",
-                        nargs="+", metavar="USERNAMES",
-                        action="store",
-                        help="One or more usernames to check with social networks. Check similar usernames using {%%} (replace to '_', '-', '.')."
-                        )
+    # parser.add_argument("username",
+    #                     nargs="+", metavar="USERNAMES",
+    #                     action="store",
+    #                     help="One or more usernames to check with social networks. Check similar usernames using {%%} (replace to '_', '-', '.')."
+    #                     )
     parser.add_argument("--browse", "-b",
                         action="store_true", dest="browse", default=False,
                         help="Browse to all results on default browser.")
@@ -568,7 +568,7 @@ def main():
     args = parser.parse_args()
     
     # If the user presses CTRL-C, exit gracefully without throwing errors
-    signal.signal(signal.SIGINT, handler)
+    # signal.signal(signal.SIGINT, handler)
         
     # Check for newer version of Sherlock. If it exists, let the user know about it
     try:
@@ -669,13 +669,13 @@ def main():
 
     # Run report on all specified users.
 
-    all_usernames = []
-    for username in args.username:
-        if(CheckForParameter(username)):
-            for name in MultipleUsernames(username):
-                all_usernames.append(name)
-        else:
-            all_usernames.append(username)
+    all_usernames = [usern]
+    # for username in args.username:
+    #     if(CheckForParameter(username)):
+    #         for name in MultipleUsernames(username):
+    #             all_usernames.append(name)
+    #     else:
+    #         all_usernames.append(username)
     for username in all_usernames:
 
         results = sherlock(username,
@@ -685,6 +685,13 @@ def main():
                            unique_tor=args.unique_tor,
                            proxy=args.proxy,
                            timeout=args.timeout)
+
+        returnvalue = {}
+        for website_name in results:
+            dictionary = results[website_name]
+            if dictionary.get("status").status == QueryStatus.CLAIMED:
+                returnvalue[website_name] = dictionary["url_user"]
+        return returnvalue
 
         if args.output:
             result_file = args.output
@@ -771,6 +778,6 @@ def main():
     query_notify.finish()
 
 
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     main()
     # Notify caller that all queries are finished.

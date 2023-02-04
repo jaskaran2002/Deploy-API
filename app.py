@@ -17,6 +17,8 @@ import sys
 import os
 
 import subprocess
+sys.path.append(os.path.abspath("/Users/jaskaran/Documents/Projects/Deploy-API/sherlock/sherlock"))
+from sherlock import customfunc
 
 
 app=Flask(__name__)
@@ -202,6 +204,10 @@ def ongaBunga(user_inp):
 
 @app.route('/sherlock/<string:query>')
 def searchUsername(query):
+    
+    tempdata = customfunc(query)
+    return tempdata
+
     timeout = 1
     # Taking Data
     # p = subprocess.Popen([f'cd sherlock && python3 sherlock {query} --timeout {timeout} > ../{query}.txt'], shell=True)
