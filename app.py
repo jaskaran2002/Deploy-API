@@ -28,7 +28,8 @@ def hello_world():
 @app.route('/d')
 def debuggincode():
     currdir = os.getcwd()
-    return {'nothing' : f"{currdir}"}
+    allfiles = os.listdir()
+    return {'nothing' : f"{currdir}", 'directories': f"{allfiles}"}
 
 @app.route('/runredditPython/<string:query>')
 def searchReddit(query):
