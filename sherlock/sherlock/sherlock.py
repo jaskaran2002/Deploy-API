@@ -688,7 +688,7 @@ def customfunc(usern):
                            tor=False,
                            unique_tor=False,
                            proxy=None,
-                           timeout=5)
+                           timeout=1)
 
         returnvalue = {}
         for website_name in results:
