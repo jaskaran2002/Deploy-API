@@ -1,4 +1,6 @@
 from flask import Flask,jsonify,Response
+from flask_cors import CORS, cross_origin
+
 
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
@@ -23,6 +25,7 @@ from sherlock import customfunc
 
 
 app=Flask(__name__)
+CORS(app)
 
 @app.route('/')
 def hello_world():
@@ -240,4 +243,4 @@ def searchUsername(query):
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=8000, debug=True)
