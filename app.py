@@ -32,7 +32,8 @@ def hello_world():
 def debuggincode():
     currdir = os.getcwd()
     allfiles = os.listdir()
-    return {'nothing' : f"{currdir}", 'directories': f"{allfiles}"}
+    chrometemp = os.environ.get("GOOGLE_CHROME_BIN")
+    return {'nothing' : f"{currdir}", 'directories': f"{allfiles}", 'chrome': f"{chrometemp}"}
 
 @app.route('/runredditPython/<string:query>')
 def searchReddit(query):
