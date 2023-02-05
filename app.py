@@ -60,29 +60,42 @@ def searchReddit(query):
 
     try:
         temp = WebDriverWait(driver,10).until(EC.presence_of_element_located((By.CLASS_NAME, '_2i5O0KNpb9tDq0bsNOZB_Q')))
-        tem2 = WebDriverWait(driver,10).until(EC.presence_of_element_located((By.CLASS_NAME, '_3ryJoIoycVkA88fy40qNJc')))
+#         tem2 = WebDriverWait(driver,10).until(EC.presence_of_element_located((By.CLASS_NAME, '_3ryJoIoycVkA88fy40qNJc')))
     except:
         print("NOT found")
+        
+        cards = driver.find_elements(By.CLASS_NAME, '_1poyrkZ7g36PawDueRza-J')
         driver.quit()
-        cards = driver.find_elements(By.CLASS_NAME, '_2i5O0KNpb9tDq0bsNOZB_Q')
         return {"noting" : f"{cards}"}
     data = []
 
-    cards = driver.find_elements(By.CLASS_NAME, '_2i5O0KNpb9tDq0bsNOZB_Q')
+    cards = driver.find_elements(By.CLASS_NAME, '_1poyrkZ7g36PawDueRza-J')
     for card in cards:
         info = {}
 
         currData = card.text.split('\n')
 
-        info['subreddit'] = card.find_element(By.CLASS_NAME, '_3ryJoIoycVkA88fy40qNJc').text
-        info['user'] = card.find_element(By.CLASS_NAME, '_2tbHP6ZydRpjI44J3syuqC').text
+#         info['subreddit'] = card.find_element(By.CLASS_NAME, '_3ryJoIoycVkA88fy40qNJc').text
+#         info['user'] = card.find_element(By.CLASS_NAME, '_2tbHP6ZydRpjI44J3syuqC').text
+
+        linktest = card.find_element(By.CLASS_NAME, 'nbO8VWsMIB-Mv-tIa37NF')
+        linktag = linktest.find_element(By.CSS_SELECTOR, 'a')
+        info['link'] = linktag.get_attribute('href')
+
+        subreddittemp = info['link'].replace('https://www.reddit.com/r/', '')
+        info['subreddit'] = "r/"
+        for c in subreddittemp:
+            if (c == '/'):
+                break
+            info['subreddit'] += c
         temp = card.find_element(By.CLASS_NAME, '_eYtD2XCVieq6emjKBH3m')
         info['title'] = temp.text
         smallData = card.find_elements(By.CLASS_NAME, '_vaFo96phV6L5Hltvwcox')
 
-        info['upvotes'] = smallData[0].text.replace('upvotes', ' ').strip()
-        info['comments'] = smallData[1].text.replace('comments', ' ').strip()
-        info['awards'] = smallData[2].text.replace('awards', ' ').strip()
+        if (smallData):
+            info['upvotes'] = smallData[0].text.replace('upvotes', ' ').strip()
+            info['comments'] = smallData[1].text.replace('comments', ' ').strip()
+            info['awards'] = smallData[2].text.replace('awards', ' ').strip()
         data.append(info)
 
     driver.quit()
