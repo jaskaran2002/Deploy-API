@@ -20,7 +20,7 @@ import os
 
 import subprocess
 sys.path.append(os.path.abspath("/opt/render/project/src/sherlock/sherlock"))
-# sys.path.append(os.path.abspath("/Users/jaskaran/Documents/Projects/Deploy-API/sherlock/sherlock"))
+
 from sherlock import customfunc
 
 
@@ -49,18 +49,14 @@ def searchReddit(query):
     chrome_options.add_argument('--disable-dev-shm-usage')
     driver = webdriver.Chrome(options=chrome_options)
 
-    # options = Options()
-    # options.headless = True
-    # driver = webdriver.Firefox(executable_path=PATH, options=options)
+
     query.replace(' ', "%20")
     url = f"https://www.reddit.com/search/?q={query}"
     driver.get(url)
-    # driver.implicitly_wait(5)
-    # data = []
+
 
     try:
         temp = WebDriverWait(driver,10).until(EC.presence_of_element_located((By.CLASS_NAME, '_2i5O0KNpb9tDq0bsNOZB_Q')))
-#         tem2 = WebDriverWait(driver,10).until(EC.presence_of_element_located((By.CLASS_NAME, '_3ryJoIoycVkA88fy40qNJc')))
     except:
         print("NOT found")
         
@@ -75,8 +71,7 @@ def searchReddit(query):
 
         currData = card.text.split('\n')
 
-#         info['subreddit'] = card.find_element(By.CLASS_NAME, '_3ryJoIoycVkA88fy40qNJc').text
-#         info['user'] = card.find_element(By.CLASS_NAME, '_2tbHP6ZydRpjI44J3syuqC').text
+
 
         linktest = card.find_element(By.CLASS_NAME, 'nbO8VWsMIB-Mv-tIa37NF')
         linktag = linktest.find_element(By.CSS_SELECTOR, 'a')
@@ -99,15 +94,11 @@ def searchReddit(query):
         data.append(info)
 
     driver.quit()
-    # return data
 
     return Response(json.dumps(data),mimetype='application/json')
 
 
-# query = 'usa'
-# data = searchReddit(query)
-# with open('./test.json', 'w') as f:
-#     json.dump(data,f,indent=4)
+
 
 
 @app.route('/runDuckPython/<string:query>')
@@ -122,16 +113,10 @@ def searchNews(query):
     chrome_options.add_argument('--disable-dev-shm-usage')
     driver = webdriver.Chrome(options=chrome_options)
 
-    # options = Options()
-    # PATH_TO_DEV_NULL = '/dev/null'
-    # options.headless = True
-    # driver = webdriver.Firefox(executable_path=PATH, options=options, service_log_path=PATH_TO_DEV_NULL)
-    # driver = webdriver.Firefox(executable_path=PATH)
+
     url = f"https://duckduckgo.com/{query}"
     driver.get(url)
-    # search = driver.find_element(By.ID, 'searchbox_input')
-    # search.send_keys(query)
-    # search.send_keys(Keys.RETURN)
+
     try:
         news = WebDriverWait(driver,10).until(EC.presence_of_element_located((By.LINK_TEXT, 'News')))
     except:
@@ -227,16 +212,9 @@ def searchUsername(query):
     return tempdata
 
     timeout = 1
-    # Taking Data
-    # p = subprocess.Popen([f'cd sherlock && python3 sherlock {query} --timeout {timeout} > ../{query}.txt'], shell=True)
     p = subprocess.Popen([f'workon deployingapi && cd /home/asgardian/Deploy-API/sherlock && python sherlock {query} --timeout {timeout} > ../{query}.txt'], shell=True)
     p.wait()
 
-    # Removing Default File
-    # p1 = subprocess.Popen([f'rm -f /home/asgardian/Deploy-API/sherlock/{query}.txt'], shell=True)
-    # p1.wait()
-
-    # file = open(f'/home/asgardian/Deploy-API/{query}.txt','r')
     file = open(f'/home/asgardian/Deploy-API/sherlock/{query}.txt','r')
     data = file.read().strip().split('\n')
     data.pop()
@@ -248,7 +226,6 @@ def searchUsername(query):
         final[temp[0:indx].strip()] = temp[indx+1:].strip()
 
     file.close()
-    # p1 = subprocess.Popen([f'rm -f /home/asgardian/Deploy-API/{query}.txt'], shell=True)
     p1 = subprocess.Popen([f'rm -f /home/asgardian/Deploy-API/sherlock/{query}.txt'], shell=True)
     p1.wait()
     return final
